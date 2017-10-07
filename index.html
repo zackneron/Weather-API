@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather API</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="header-container">
+			<ul class="list-inline clearfix">
+				<li class="pull-left">
+					<a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+				</li>
+				<li class="pull-right">
+					<span>Weather API</span>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<section>
+		<div class="container">
+			<div class="content-container">
+				<div class="content-title">
+					<h1 class="text-center">Weather forecast</h1>
+					<h2>Current weather and forecasts in your city</h2>
+				</div>
+				<div class="content-body">
+					<p>Welcome to our weather API. Here you can access the current weather condition of your location.</p>
+				</div>
+			</div>
+
+			<div class="weather-container">
+				<div class="weather-title">
+					<h1 id="userCurrentLoc">
+						<div class="loader"></div>
+					</h1>
+				</div>
+				<div class="weather-body">
+					<ul>
+						<li>
+							<span class="weather-item">Location Temperature: </span> 
+							<span id="userCurrentTemp"></span>
+						</li>
+						<li>
+							<span class="weather-item">Location current Weather: </span> 
+							<span id="userCurrentWeather"></span>
+						</li>
+						<li>
+							<span class="weather-item">Location High Temperature: </span> 
+							<span id="highTemp"></span>
+						</li>
+						<li>
+							<span class="weather-item">Location Low Temperature: </span> 
+							<span id="lowTemp"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="weather-footer">
+					<button id="reload">Reset</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
