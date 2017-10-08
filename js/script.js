@@ -19,11 +19,17 @@ $(function(){
 	  		var highTemp = weatherdata.main.temp_max;
 	  		var lowTemp = weatherdata.main.temp_min; 
 
-	  		$('#userCurrentLoc').html("You are currently in: " + userCurrentLoc);
+	  		if(userCurrentLoc == weatherdata.name){
+	  			$('#userCurrentLoc').html("You are currently in: " + userCurrentLoc);
+	  		} else {
+	  			$('#userCurrentLoc').html("We could not find your location. Please try again. ");
+	  		}
+	  		
 	  		$('#userCurrentTemp').html(userCurrentTemp);
 	  		$('#userCurrentWeather').html(userCurrentWeather);
 	  		$('#highTemp').html(highTemp);
 	  		$('#lowTemp').html(lowTemp);
+
 	  	})
 
 	});
